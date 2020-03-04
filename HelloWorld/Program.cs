@@ -1,4 +1,7 @@
 ﻿using System;
+using System.Linq;
+using System.Collections.Generic;
+
 namespace HelloWorld
 {
     class Program
@@ -7,7 +10,19 @@ namespace HelloWorld
         {
             //TestPermuteString();
             //TestMaximumSumSubsequenceNonAdjacent();
-            TestMinimumCoins();
+            //TestMinimumCoins();
+
+            //TestStackUsingLinkedList();
+            TestQueueUsingLinkedList();
+
+
+            //int[] input = new int[] { 1, 2, 3 };
+            //var test = input.Where(i => i > 2).Select(i =>i );
+            //foreach(var i in test)
+            //{
+            //    Console.WriteLine(i);
+            //}
+
         }
 
 
@@ -25,8 +40,21 @@ namespace HelloWorld
             stack.Push(13);
             stack.Push(14);
             stack.Pop();
-            stack.Pop();
+
             stack.Display();
+        }
+
+        static void TestQueueUsingLinkedList()
+        {
+            QueueUsingLinkedList queue = new QueueUsingLinkedList();
+            queue.Enqueue(10);
+            queue.Enqueue(11);
+            queue.Enqueue(12);
+            queue.Enqueue(13);
+            queue.Enqueue(14);
+            queue.Dequeue();
+
+            queue.Display();
         }
 
         static void TestMaximumSumSubsequenceNonAdjacent()
